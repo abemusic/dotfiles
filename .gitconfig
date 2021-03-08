@@ -191,10 +191,11 @@
   email = abe.music@gmail.com
 
 [includeIf "gitdir:~/BuiltSource/"]
-  path = ~/Built/.gitconfig
+  path = ~/.gitconfig.built
 
 [includeIf "gitdir:~/Built/"]
-  path = ~/Built/.gitconfig
+  path = ~/.gitconfig.built
 	
 [includeIf "gitdir:~/Projects/built/"]
-  path = ~/Built/.gitconfig
+  path = ~/.gitconfig.built
+
