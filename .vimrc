@@ -5,7 +5,9 @@ colorscheme slate
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
-set clipboard=unnamed
+" set clipboard=unnamed
+" Set clipboard to a black hole
+set clipboard=""
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
