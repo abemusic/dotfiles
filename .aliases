@@ -162,4 +162,5 @@ alias tf='terraform'
 
 # kubernetes
 alias k='kubectl'
+alias kg='kubectl get'
 
