@@ -190,12 +190,3 @@
   name = Abe Music
   email = abe.music@gmail.com
 
-[includeIf "gitdir:~/BuiltSource/"]
-  path = ~/.gitconfig.built
-
-[includeIf "gitdir:~/Built/"]
-  path = ~/.gitconfig.built
-	
-[includeIf "gitdir:~/Projects/built/"]
-  path = ~/.gitconfig.built
-
