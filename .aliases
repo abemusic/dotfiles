@@ -159,3 +159,7 @@ alias prp='pipenv run python'
 
 # terraform
 alias tf='terraform'
+
+# kubernetes
+alias k='kubectl'
+
