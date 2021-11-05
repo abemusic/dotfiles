@@ -190,3 +190,6 @@
   name = Abe Music
   email = abe.music@gmail.com
 
+# Custom user config for Cisco
+[includeIf "gitdir:~/Projects/cisco/"]
+  path = ~/.gitconfig.cisco
