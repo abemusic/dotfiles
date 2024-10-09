@@ -3,58 +3,198 @@
     "editor.detectIndentation": true,
     "editor.fontSize": 18,
     "editor.insertSpaces": true,
+    "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        {
+            "color": "#ff3333",
+            "column": 120
+        }
+    ],
     "editor.tabSize": 4,
     "editor.disableTranslate3d": true,
 
-    "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
-
-    "vim.hlsearch": true,
-
-    "window.title": "${activeEditorMedium}${separator}${rootName}",
-    "window.zoomLevel": 0,
-
-    "workbench.editor.enablePreview": false,
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.inlineSuggest.enabled": true,
-
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true,
+        "**/venv/**": true,
+        "**/.terragrunt-cache/**": true,
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/*.code-search": true,
+        "**/.terragrunt-cache/**": true,
+        "**/ansible/playbooks/appliance/**": true,
+        "**/ansible/playbooks/roles/**": true,
     },
 
-    "mjml.beautify": {
-        "indent_size": 2,
-        "wrap_line_length": 120,
-        "wrap_attributes": "aligned-multiple"
-    },
-    "[mjml]": {
+    "ansible.validation.enabled": false,
+    "ansible.validation.lint.arguments": "--skip-list=name --warn-list=ignore-errors",
+
+    "[ansible]": {
+        "editor.detectIndentation": true,
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "advanced",
         "editor.formatOnSave": true
     },
 
+    "vim.foldfix": true,
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["n"],
+            "after": ["n", "z", "z"]
+        },
+        {
+            "before": ["N"],
+            "after": ["N", "z", "z"]
+        }
+    ],
+
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.inlineSuggest.enabled": true,
+    "git.ignoreLegacyWarning": true,
+    "gitlens.advanced.messages": {
+        "suppressGitVersionWarning": true
+    },
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": true,
+        "markdown": true,
+        "scminput": false,
+        "yaml": true
+    },
+    "redhat.telemetry.enabled": false,
+    "workbench.colorCustomizations": {
+        "editor.findMatchBackground": "#ff0000",
+        "editor.findMatchHighlightBackground": "#ff0000"
+    },
+    "workbench.colorTheme": "GitHub Dark Default",
+    "remote.SSH.serverInstallPath": {
+        "sjc": "/ws/abmusic-sjc/.vscode-server"
+    },
+    "[markdown]": {
+        "editor.rulers": [
+            {
+                "color": "#ff3333",
+                "column": 100
+            }
+        ],
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.wordWrapColumn": 100,
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "python.analysis.typeCheckingMode": "basic",
+    "black-formatter.importStrategy": "fromEnvironment",
+    "pylint.path": ["${interpreter}", "-m", "pylint"],
+    "flake8.path": ["${interpreter}", "-m", "flake8"],
     "[python]": {
         "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
     },
-
-    "typescript.preferences.quoteStyle": "single",
-    "[typescript]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[typescriptreact]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
-    "[vue]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-
     "[yaml]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced"
-    }
+        "editor.defaultFormatter": "redhat.vscode-yaml",
+        "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[terraform]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "editor.tabSize": 2
+    },
+    "[terraform-vars]": {
+        "editor.defaultFormatter": "hashicorp.terraform",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file",
+        "editor.tabSize": 2
+    },
+    "terraform.languageServer.terraform.path": "/opt/homebrew/bin/tofu",
+    "[terragrunt]": {
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "files.associations": {
+        "terragrunt.hcl": "terragrunt"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "cSpell.userWords": [
+        "botocore",
+        "CDETS",
+        "Intersight",
+        "networkx",
+        "nexusdash",
+        "NOGO",
+        "offcycle",
+        "pipenv",
+        "preprocessors",
+        "Pydantic",
+        "pyenv",
+        "sealights",
+        "secho",
+        "subcluster",
+        "subclusters",
+        "TLDR",
+        "typer",
+        "virtualenv",
+        "webex",
+        "zshell"
+    ],
+    "cSpell.ignoreWords": [
+        "TLDR",
+        "pipenv",
+        "pyenv",
+        "virtualenv",
+        "zshell"
+    ],
+
+    // Using the light mode
+    "indentRainbow.indicatorStyle": "light",
+    // we use a simple 1 pixel wide line
+    "indentRainbow.lightIndicatorStyleLineWidth": 1,
+    // the same colors as above but more visible
+    "indentRainbow.colors": [
+        "rgba(255,255,64,0.3)",
+        "rgba(127,255,127,0.3)",
+        "rgba(255,127,255,0.3)",
+        "rgba(79,236,236,0.3)"
+    ],
+    "editor.cursorSurroundingLines": 3,
+    "git.openRepositoryInParentFolders": "never",
+    "gitlens.changes.locations": [
+        "gutter",
+        "overview"
+    ],
+    "cSpell.enabled": false,
+    "editor.unicodeHighlight.allowedCharacters": {
+        "​": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.stickyScroll.enabled": true,
+    "editor.stickyScroll.enabled": false,
+    "jupyter.logging.level": "error",
+    "workbench.iconTheme": "grafana",
+    "grafana-vscode.URL": "http://127.0.0.1:9002",
+    "grafana-vscode.telemetry": false,
+    "grafana-vscode.theme": "dark",
+    "github.copilot.editor.enableAutoCompletions": true,
 }
